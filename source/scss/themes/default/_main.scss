@@ -1,0 +1,165 @@
+@font-face {
+    font-family: 'Anime_Ace_v3';
+    src: url('../fonts/Anime_Ace_v3.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+[-unit-button*='type']{
+
+}
+[-unit-button~='type1']{
+  padding: 10px 10px;
+  border: 1px solid #868686;
+  background: linear-gradient(0deg, rgb(134, 134, 134), rgba(158, 158, 158, 1));
+  cursor: pointer;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  color: #e8e3e3;
+  text-shadow: 1px 1px 1px #000;
+}
+
+body{
+  background: url('../images/w7.jpg');
+  font-family: /*'Anime_Ace_v3'*/Arial;
+  min-height: 100%;
+  position: relative;
+  z-index: 0;
+    &:before{
+      content: '';
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(255, 255, 255, 0.60);
+      z-index: -1;
+    }
+}
+  .view-wrapper{
+    width: 100%;
+    justify-content: center;
+    min-height: 100%;
+    // background: rgba(255, 255, 255, 0.60);
+
+  }
+    .bubbles{
+      flex-direction: column;
+      max-width: 1260px;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      min-height: 100%;
+    }
+      .back-to-github{
+        cursor: pointer;
+        // text-decoration: underline;
+        border-bottom: 1px solid #333;
+        padding: 5px;
+      }
+      .bubbles__title{
+        // text-shadow: 1px 1px 1px #c0ff00;
+        letter-spacing: 3px;
+        font-size: 23px;
+        padding-top: 20px;
+      }
+      .bubbles__description{
+        margin-top: 20px;
+        // text-shadow: 1px 1px 1px #ec12d6;
+        letter-spacing: 3px
+      }
+      .bubbles-controllers{
+        flex-direction: column;
+        margin-top: 20px;
+        align-items: center;
+      }
+        [class*='bubbles-controllers__row']{
+
+        }
+        .bubbles-controllers__row1{
+          margin-top: 10px;
+        }
+          .bubbles-controllers__field-wrapper{
+            border: 2px solid #ccc;
+            padding: 10px 15px;
+            // background: linear-gradient(0deg, rgba(#00e0e0, 0.68), rgba(255, 231, 17, 0.78));
+            background: #fff;
+            color: #444;
+            border-radius: 5px;
+          }
+            .bubbles-controllers__field{
+
+            }
+          .bubbles-controllers__generate{
+            margin-left: 10px;
+          }
+
+        .bubbles-controllers__row2{
+
+        }
+        .bubbles-controllers__buttonset{
+          margin-top: 20px;
+        }
+          [class*='bubbles-controllers__button_']{
+
+              &:not(first-child){
+                margin-left: 10px;
+              }
+          }
+          .bubbles-controllers__button_start{
+
+          }
+          .bubbles-controllers__button_pause{
+
+          }
+          .bubbles-controllers__button_continue{
+
+          }
+          .bubbles-controllers__button_stop{
+
+          }
+      $bubbles-queue--transform-rotate:-15;
+      .bubbles-queue{
+        width: 100%;
+        height: 200px;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none;
+          svg{
+            transform: rotate(#{$bubbles-queue--transform-rotate}deg);
+            width: 1280px !important;
+          }
+      }
+
+        .bubbles-queue__item{
+          stroke: rgba(255, 255, 255, 0.3);
+          /*linear-gradient(0deg, rgba(0, 240, 240, 0.25), #f30)*/
+          fill: rgba(0, 240, 240, 0.25);
+          stroke-width: 1px;
+            [class*='_active']{
+              stroke: #0f93ff;
+              fill: rgba(#00e0e0, 0.60);
+              // fill-stroke:#00f0f0;
+            }
+        }
+          [class*='bubbles-queue__bubble']{
+
+            stroke-width: 2px;
+          }
+          .bubbles-queue__text{
+            // color: #0f0;
+            // fill:#ff2778;
+            fill: rgb(0, 41, 255);
+            stroke:transparent;
+            // stroke:#00e0e0;
+            // stroke-width:;
+            stroke-linecap:round;
+            stroke-linejoin:round;
+            // stroke-dasharray:;
+            // stroke-dashoffset:10;
+            // stroke-opacity:;
+            font-size: 16px;
+            transform: rotate(#{-$bubbles-queue--transform-rotate}deg);
+          }

@@ -1,0 +1,21 @@
+@charset 'utf-8';
+
+/*GLOBAL*/
+  /**/
+  @import './global/_variables.scss';
+  /**/
+  @import './global/_normalize.scss';
+  /**/
+  @import './global/_include-media.scss';
+
+/*THEME*/
+  @import './themes/default/_main.scss';
+  
+svg{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+  g{
+   display: flex;
+  }

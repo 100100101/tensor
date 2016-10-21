@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!--STYLES-->
+  <link rel="stylesheet" href="./public/css/styles.min.css" media="screen" title="no title">
+</head>
+<body>
+  <div class="view-wrapper">
+    <div class="bubbles">
+        <a href="https://github.com/JSerGit/tensor" class="back-to-github">
+          <&nbsp;&nbsp;&nbsp; back to github repository
+        </a>
+        <h3 class="bubbles__title">
+          Сортировка чисел методом пузырька
+        </h3>
+
+        <div class="bubbles__description">
+          Заполните / сгенерируйте массив чисел разделяя их запятой и нажмите 'старт'
+        </div>
+
+        <div class="bubbles-controllers">
+          <div class="bubbles-controllers__row1">
+            <div class="bubbles-controllers__field-wrapper">
+              <span class="bubbles-controllers__field" tabindex="1" contenteditable>
+                9, 3, 16, 5, 1, 6, 2, 4, 10, 7, 8, 14, 20, 31
+              </span>
+            </div>
+            <span class="bubbles-controllers__generate" -unit-button="type1">Генерировать</span>
+          </div>
+
+          <!--bubbles controllers buttonset-->
+          <div class="bubbles-controllers__row2 bubbles-controllers__buttonset">
+            <span class="bubbles-controllers__button_start" -unit-button="type1">Старт</span>
+            <span class="bubbles-controllers__button_pause" -unit-button="type1">Пауза</span>
+            <span class="bubbles-controllers__button_stop" -unit-button="type1">Стоп</span>
+          </div>
+        </div>
+
+        <!--bubbles queue-->
+        <div class="bubbles-queue">
+        </div>
+    </div>
+  </div>
+  <!-- <bubbles></bubbles> -->
+
+  <!--SCRIPTS-->
+  <script src="./public/js/d3.min.js"></script>
+
+  <script src="./public/js/bundle.js"></script>
+  <!--TAGS-->
+  <!-- <script src="./source/tags/bubbles.tag" type="riot/tag"></script> -->
+  <script type="text/javascript">
+    // riot.mount('*');
+  </script>
+</body>
+</html>
